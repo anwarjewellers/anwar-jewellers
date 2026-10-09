@@ -1,0 +1,25 @@
+# Cloudflare Pages project settings (free plan).
+name = "jewellery-shop"
+pages_build_output_dir = "./dist"
+compatibility_date = "2025-09-01"
+
+# Database: create it once with  npx wrangler d1 create jewellery-shop-db
+# then paste the database_id it prints below.
+[[d1_databases]]
+binding = "DB"
+database_name = "jewellery-shop-db"
+database_id = "410ac007-e6e2-4024-95a3-8f7efc50b341"
+migrations_dir = "migrations"
+
+# Product photos: create it once with  npx wrangler r2 bucket create jewellery-shop-images
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "jewellery-shop-images"
+
+# Non-secret settings. Secrets (RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET, BORZO_API_TOKEN, ...) are added in the
+# Cloudflare dashboard → your Pages project → Settings → Variables and Secrets (see docs/DEPLOYMENT.md).
+[vars]
+BORZO_MODE = "test"
+BORZO_VEHICLE_TYPE_ID = "8"
+# Firebase project ID (Firebase console → Project settings → General)
+FIREBASE_PROJECT_ID = "anwar-jewellers"

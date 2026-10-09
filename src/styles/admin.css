@@ -1,0 +1,79 @@
+/* Admin panel: same black + metallic gold as the shop */
+:root, [data-bs-theme="dark"] {
+    --gold: #c9a24a;
+    --gold-light: #e8cc84;
+    --gold-grad: linear-gradient(135deg, #f0d68f 0%, #c9a24a 45%, #a07c2e 100%);
+    --side: #060606;
+    --line: #2e2a22;
+    --bs-body-bg: #0e0e0e;
+    --bs-body-color: #ece6d8;
+    --bs-secondary-color: #a79f8f;
+    --bs-border-color: #2e2a22;
+    --bs-tertiary-bg: #1b1a18;
+    --bs-link-color: #e8cc84;
+    --bs-link-color-rgb: 232, 204, 132;
+    --bs-link-hover-color: #fff1c9;
+    --bs-link-hover-color-rgb: 255, 241, 201;
+    --bs-heading-color: #f5efe2;
+}
+body { background: #0e0e0e; font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--gold-light); }
+.text-muted { color: #a79f8f !important; }
+
+.btn-gold { background: var(--gold-grad); border: 0; color: #141007; font-weight: 600; }
+.btn-gold:hover, .btn-gold:focus { background: linear-gradient(135deg, #f7e2a6 0%, #d4ad55 45%, #ad8634 100%); color: #000; }
+.btn-dark { --bs-btn-bg: #1f1c16; --bs-btn-border-color: #4a4232; --bs-btn-color: #e8cc84; --bs-btn-hover-bg: var(--gold); --bs-btn-hover-border-color: var(--gold); --bs-btn-hover-color: #111; --bs-btn-active-bg: var(--gold); --bs-btn-active-color: #111; }
+.btn-outline-dark { --bs-btn-color: #ece6d8; --bs-btn-border-color: #4a4232; --bs-btn-hover-bg: var(--gold); --bs-btn-hover-color: #111; --bs-btn-hover-border-color: var(--gold); --bs-btn-active-bg: var(--gold); --bs-btn-active-color: #111; --bs-btn-active-border-color: var(--gold); }
+
+.admin-wrap { display: flex; min-height: 100vh; }
+.admin-sidebar { background: var(--side); color: #ddd; border-right: 1px solid var(--line); }
+@media (min-width: 992px) { .admin-sidebar { width: 236px; flex: 0 0 236px; position: sticky; top: 0; height: 100vh; } }
+.admin-sidebar.offcanvas-lg { --bs-offcanvas-bg: var(--side); --bs-offcanvas-color: #ddd; }
+.admin-brand { display: block; padding: 20px; color: var(--gold-light); font-family: "Cinzel", serif; font-weight: 700; font-size: 1.05rem; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--line); }
+.admin-brand:hover { color: #fff1c9; }
+.admin-brand i { color: var(--gold); }
+.admin-brand small { display: block; font-family: "Inter", sans-serif; font-size: .68rem; letter-spacing: .2em; color: #8a8273; font-weight: 500; margin-top: 2px; }
+.admin-sidebar .nav-link { color: #cfc8b8; padding: 10px 20px; display: flex; gap: 10px; align-items: center; border-left: 3px solid transparent; }
+.admin-sidebar .nav-link:hover { color: var(--gold-light); background: rgba(201,162,74,.06); }
+.admin-sidebar .nav-link.active { color: var(--gold-light); background: rgba(201,162,74,.14); border-left-color: var(--gold); }
+.admin-main { flex: 1; min-width: 0; }
+.admin-topbar { background: #0a0a0a; border-bottom: 1px solid var(--line); padding: 12px 20px; display: flex; align-items: center; gap: 12px; position: sticky; top: 0; z-index: 10; }
+.admin-topbar h1 { font-family: "Cinzel", serif; color: var(--gold-light); letter-spacing: .04em; }
+.admin-content { padding: 20px; }
+@media (max-width: 575px) { .admin-content { padding: 12px; } }
+
+.card { --bs-card-bg: #151515; --bs-card-border-color: var(--line); --bs-card-cap-bg: #121212; }
+.card-header strong { color: var(--gold-light); }
+.table { --bs-table-bg: transparent; --bs-table-border-color: var(--line); --bs-table-hover-bg: rgba(201,162,74,.06); }
+.table thead th { color: #a79f8f; font-weight: 500; font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; }
+.list-group { --bs-list-group-bg: transparent; --bs-list-group-border-color: var(--line); }
+
+.stat-card { background: #151515; border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: flex; gap: 14px; align-items: center; height: 100%; }
+.stat-icon { width: 44px; height: 44px; border-radius: 10px; background: #221f18; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--gold-light); flex: 0 0 44px; }
+.stat-label { font-size: .8rem; color: #a79f8f; }
+.stat-value { font-size: 1.35rem; font-weight: 700; color: #f5efe2; }
+.stat-card.gold { border-color: rgba(201,162,74,.6); }
+.stat-card.gold .stat-icon { background: var(--gold-grad); color: #141007; }
+.stat-card.gold .stat-value { color: var(--gold-light); }
+.stat-card.ok .stat-icon { background: #12271a; color: #6fd08c; }
+.stat-card.warn .stat-icon { background: #2c2210; color: #f0b54a; }
+.stat-card.bad .stat-icon { background: #2c1414; color: #ff7b6b; }
+
+.form-control, .form-select, .input-group-text { background-color: #1b1a18; border-color: #3a352b; color: #ece6d8; }
+.form-control:focus, .form-select:focus { background-color: #1b1a18; color: #fff; border-color: var(--gold); box-shadow: 0 0 0 .2rem rgba(201,162,74,.25); }
+.form-check-input:checked { background-color: var(--gold); border-color: var(--gold); }
+.badge.text-bg-light { background: #2a261d !important; color: #e8cc84 !important; }
+.pagination { --bs-pagination-bg: #151515; --bs-pagination-border-color: var(--line); --bs-pagination-color: #ece6d8; --bs-pagination-hover-bg: #262219; --bs-pagination-hover-color: var(--gold-light); --bs-pagination-active-bg: var(--gold); --bs-pagination-active-border-color: var(--gold); --bs-pagination-active-color: #111; --bs-pagination-disabled-bg: #151515; }
+
+.admin-thumb { width: 44px; height: 44px; object-fit: cover; border-radius: 6px; background: #1b1a18; }
+.admin-thumb.lg { width: 96px; height: 96px; }
+.image-tile { position: relative; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #151515; }
+.image-tile.main { border-color: var(--gold); }
+.image-tile img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #1b1a18; }
+.admin-savebar { position: sticky; bottom: 0; background: rgba(14,14,14,.96); padding: 12px 0; border-top: 1px solid var(--line); }
+
+.admin-login { display: flex; min-height: 100vh; align-items: center; justify-content: center; padding: 16px;
+    background: radial-gradient(ellipse 50% 60% at 75% 40%, rgba(255,255,255,.06), transparent 70%), linear-gradient(118deg, #0b0b0b 0%, #0b0b0b 50%, #262626 58%, #3d3d3d 61%, #161616 68%, #0b0b0b 100%); }
+.admin-login-card { --bs-card-bg: #111; border: 1px solid rgba(201,162,74,.5); }
+.admin-title { font-family: "Cinzel", serif; color: var(--gold-light); letter-spacing: .06em; text-transform: uppercase; }
+.login-gem { font-size: 2rem; color: var(--gold); }

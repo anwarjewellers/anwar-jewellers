@@ -1,0 +1,22 @@
+# Copy this file to .dev.vars for local testing (never commit .dev.vars).
+# On Cloudflare, add the same names in: Pages project → Settings → Variables and Secrets.
+
+# First admin login (created the first time you log in with these)
+ADMIN_NAME=Shop Owner
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD=ChangeMe@123
+
+# Razorpay (Dashboard → Account & Settings → API Keys; test keys start with rzp_test_)
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+# Dashboard → Webhooks → the secret you type when adding the webhook
+RAZORPAY_WEBHOOK_SECRET=
+
+# Borzo instant delivery (Borzo account → Integration)
+BORZO_API_TOKEN=
+BORZO_CALLBACK_SECRET=
+BORZO_MODE=test
+
+# Emails through Resend (https://resend.com, free 3,000/month)
+RESEND_API_KEY=
+MAIL_FROM=Anwar Jewellers <orders@anwarjewellers.com>

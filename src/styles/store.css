@@ -1,0 +1,15 @@
+/* Our Store page */
+.store-map { position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); height: 380px; background: var(--surface); }
+.store-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.store-map-open { position: absolute; top: 12px; left: 12px; background: #fff; color: #1a73e8; font-weight: 600; padding: 8px 14px; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,.3); text-decoration: none; font-size: .95rem; }
+.store-map-open:hover { color: #1558b0; }
+.store-card { display: flex; gap: 18px; align-items: flex-start; }
+.store-icon { flex: 0 0 56px; height: 56px; border-radius: 12px; background: var(--gold-grad); color: #141007; display: grid; place-items: center; font-size: 1.6rem; }
+.store-chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 999px; font-size: .8rem; border: 1px solid var(--gold); color: var(--gold-light); }
+.store-actions { flex: 0 0 190px; }
+@media (max-width: 767.98px) {
+  .store-map { height: 300px; }
+  .store-card { flex-wrap: wrap; }
+  .store-actions { flex: 1 1 100%; }
+  .store-actions .text-end { text-align: left !important; }
+}
