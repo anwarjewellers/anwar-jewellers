@@ -1,9 +1,17 @@
-# Jewellery Shop: React + Cloudflare (free plan)
+# Anwar Jewellers — E-Commerce Website
 
-A secure, mobile-friendly online jewellery shop. It replaces the earlier Laravel version and keeps all of its features:
+**🌐 Live site: [anwarjewellers.com](https://anwarjewellers.com)**
+
+A live online store for Anwar Jewellers, a silver and imitation jewellery shop in Hyderabad. It is built with React and runs entirely on Cloudflare's free plan, with online payments, same-day delivery and an admin panel for the shop owner.
+
+**Built by:** [Mohammed Zeeshan](https://github.com/mdzeeshan0398)
+
+## Features
 
 - **Customer website**: browse, search and filter products, wishlist, cart, checkout, online payment (Razorpay: UPI, cards, net banking, wallets), order history with live delivery tracking
-- **Admin panel** (`/admin`): dashboard with sales chart, products and photos, categories, inventory, orders, customers, sales reports with CSV export, website settings
+- **Store page**: Google Map of the showroom, directions and WhatsApp contact
+- **Sign-in**: Google and email login with Firebase Authentication
+- **Admin panel** (`/admin`, owner only): dashboard with sales chart, products and photos, categories, inventory, orders, customers, sales reports with CSV export, website settings
 - **Delivery**: instant delivery across Hyderabad by **Borzo** (fixed or live delivery price, rider booked automatically after payment, status updates by webhook)
 - **Emails**: order confirmation, new-order alert for the shop, status updates, password reset (through Resend)
 
