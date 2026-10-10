@@ -191,7 +191,7 @@ function Footer() {
               {s.contact_phone && <li><i className="bi bi-telephone" /> <a href={`tel:${s.contact_phone.replace(/\s/g, '')}`}>{s.contact_phone}</a></li>}
               {s.contact_email && <li><i className="bi bi-envelope" /> <a href={`mailto:${s.contact_email}`}>{s.contact_email}</a></li>}
               {s.support_email && <li><i className="bi bi-headset" /> Support: <a href={`mailto:${s.support_email}`}>{s.support_email}</a></li>}
-              {s.sales_email && <li><i className="bi bi-gem" /> Bulk &amp; bridal: <a href={`mailto:${s.sales_email}`}>{s.sales_email}</a></li>}
+              {s.sales_email && <li><i className="bi bi-gem" /> Retail: <a href={`mailto:${s.sales_email}`}>{s.sales_email}</a></li>}
             </ul>
           </div>
         </div>

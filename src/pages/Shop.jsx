@@ -327,7 +327,7 @@ export function StaticPage() {
           {s.whatsapp_number && <p><i className="bi bi-whatsapp text-gold" /> <a href={`https://wa.me/${s.whatsapp_number}`} target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>}
           {s.contact_email && <p><i className="bi bi-envelope text-gold" /> General: <a href={`mailto:${s.contact_email}`}>{s.contact_email}</a></p>}
           {s.support_email && <p><i className="bi bi-headset text-gold" /> Customer support (orders, returns, delivery): <a href={`mailto:${s.support_email}`}>{s.support_email}</a></p>}
-          {s.sales_email && <p><i className="bi bi-gem text-gold" /> Bulk &amp; bridal enquiries: <a href={`mailto:${s.sales_email}`}>{s.sales_email}</a></p>}
+          {s.sales_email && <p><i className="bi bi-gem text-gold" /> Retail enquiries: <a href={`mailto:${s.sales_email}`}>{s.sales_email}</a></p>}
         </div>
       ) : (
         <div className="card-box page-content" style={{ whiteSpace: 'pre-line' }}>{s[info.setting]}</div>
